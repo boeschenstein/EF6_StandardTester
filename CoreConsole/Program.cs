@@ -6,15 +6,16 @@ namespace CoreConsole
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World from .net core 3.1!");
+            Console.WriteLine("Hello World from .NET Core 3.1!");
 
             EF6_DotNetStandard.DatabaseAccess.InitializeDB();
 
             var x = new EF6_DotNetStandard.DatabaseAccess("data source=(localdb)\\mssqllocaldb;initial catalog=EF6test;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
-            //var x = new EF6_Framework461.DatabaseAccess();
-            foreach (var item in x.GetAllBlogsFromConnectionString())
+
+            var items = x.GetAllBlogsFromConnectionString();
+            foreach (var item in items)
             {
-                Console.WriteLine($".net core 3.1 says: Blog: {item.BlogId} {item.Name}");
+                Console.WriteLine($".NET Core 3.1 reads data from EF: Blog: {item.BlogId} {item.Name}");
             }
 
             Console.WriteLine("press any key to exit");
