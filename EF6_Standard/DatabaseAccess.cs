@@ -42,7 +42,7 @@ namespace EF6_DotNetStandard
             var x = new BloggingDbContext();
             foreach (var item in x.Blogs)
             {
-                Console.WriteLine($".net standard dll says: Blog: {item.BlogId} {item.Name}");
+                Console.WriteLine($".NET Standard dll says: Blog: {item.BlogId} {item.Name}");
                 yield return new Blog { BlogId = item.BlogId, Name = item.Name };
             }
         }
@@ -54,7 +54,7 @@ namespace EF6_DotNetStandard
             var x = new BloggingDbContext(connectionString);
             foreach (var item in x.Blogs)
             {
-                Console.WriteLine($".net standard dll says: Blog: {item.BlogId} {item.Name}");
+                Console.WriteLine($".NET Standard dll says: Blog: {item.BlogId} {item.Name}");
                 yield return new Blog { BlogId = item.BlogId, Name = item.Name };
             }
         }

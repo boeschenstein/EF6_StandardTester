@@ -8,12 +8,12 @@ namespace EF6_DotNetStandard.EF
     {
         public BlogDBInitializer()
         {
-            Console.WriteLine("create new database now...");
+            Console.WriteLine("Creating new database now...");
         }
 
         protected override void Seed(BloggingDbContext context)
         {
-            Console.WriteLine("seeding now...");
+            Console.WriteLine("Seeding now...");
 
             IList<Blogs> defaultStandards = new List<Blogs>();
 
