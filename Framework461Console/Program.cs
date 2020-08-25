@@ -11,7 +11,7 @@ namespace Framework461Console
             EF6_DotNetStandard.DatabaseAccess.InitializeDB();
 
             var x = new EF6_DotNetStandard.DatabaseAccess("data source=(localdb)\\mssqllocaldb;initial catalog=EF6test;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
-            
+
             var items = x.GetAllBlogsFromConnectionString();
             foreach (var item in items)
             {

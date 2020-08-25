@@ -1,7 +1,6 @@
 namespace EF6_DotNetStandard
 {
     using System.Data.Entity;
-    using EF6_DotNetStandard.EF;
 
     public partial class BloggingDbContext : DbContext
     {

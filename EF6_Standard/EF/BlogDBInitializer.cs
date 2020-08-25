@@ -17,9 +17,9 @@ namespace EF6_DotNetStandard.EF
 
             IList<Blogs> defaultStandards = new List<Blogs>();
 
-            defaultStandards.Add(new Blogs() { Name = "Blog from database A" });
-            defaultStandards.Add(new Blogs() { Name = "Blog from database B" });
-            defaultStandards.Add(new Blogs() { Name = "Blog from database C" });
+            defaultStandards.Add(new Blogs() { Name = "Blog from database A " + DateTime.Now });
+            defaultStandards.Add(new Blogs() { Name = "Blog from database B " + DateTime.Now });
+            defaultStandards.Add(new Blogs() { Name = "Blog from database C " + DateTime.Now });
 
             context.Blogs.AddRange(defaultStandards);
 
